@@ -133,5 +133,9 @@
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.broadleafcommerce</groupId>
+            <artifactId>broadleaf-enterprise</artifactId>
+        </dependency>
     </dependencies>
 </project>
