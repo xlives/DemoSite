@@ -230,6 +230,13 @@
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
+                <artifactId>broadleaf-workflow-enterprise</artifactId>
+                <version>${blc.version}</version>
+                <type>jar</type>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.broadleafcommerce</groupId>
                 <artifactId>integration-enterprise</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
