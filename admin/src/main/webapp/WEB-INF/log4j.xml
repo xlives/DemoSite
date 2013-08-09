@@ -8,6 +8,12 @@
         </layout>
     </appender>
 
+    <!-- Trace level on this logger will output parameters that are bound to SQL queries -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder"> <level value="warn" /> </logger>
+    
+    <!-- Debug level on this logger will output the merged Spring application context -->
+    <logger name="org.broadleafcommerce.common.extensibility.context.MergeApplicationContextXmlConfigResource"> <level value="debug" /> </logger>
+    
     <logger name="org.broadleafcommerce"> <level value="warn" /> </logger>
     <logger name="org.hibernate"> <level value="warn" /> </logger>
     <logger name="org.springframework"> <level value="warn" /> </logger>
