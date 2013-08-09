@@ -138,6 +138,7 @@
 	<bean id="blJsResources" class="org.broadleafcommerce.common.web.resource.BroadleafResourceHttpRequestHandler">
         <property name="handlers">
             <list>
+                <ref bean="blBLCJSResourceHandler" />
                 <ref bean="blRuleBuilderEnumOptionsResourceHandler" />
             </list>
         </property>
