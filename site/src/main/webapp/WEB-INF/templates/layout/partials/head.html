@@ -23,11 +23,13 @@
                 files="style.css,
                        jquery-ui-1.10.2.custom.css,
                        font-awesome.min.css,
-                       sandbox-client.css,
                        jquery.rating.css" />
+                       
+    <div th:if="${#brc.adminMode}" th:remove="tag">
+        <link rel="stylesheet" th:href="@{/css/sandbox-client.css}" />
+    </div>
     
     <link rel="stylesheet" th:unless="${#strings.isEmpty(additionalCss)}" />
-    
 
     <script src="../../js/libs/modernizr-2.5.3.min.js" th:src="@{/js/libs/modernizr-2.5.3.min.js}"></script>
     

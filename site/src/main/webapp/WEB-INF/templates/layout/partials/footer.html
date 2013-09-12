@@ -50,12 +50,15 @@
                 mapping-prefix="/js/"
                 files="BLC.js,
                        blc-dates.js,
-                       sandbox-client.js,
                        heatClinic.js,
                        cartOperations.js,
                        checkoutOperations.js,
                        globalOnReady.js,
                        manageAccountOperations.js,
                        reviewOperations.js" />
+                       
+    <div th:if="${#brc.adminMode}" th:remove="tag">
+        <script th:src="@{/js/sandbox-client.js}"></script>
+    </div>
 
 </footer>
