@@ -23,6 +23,7 @@
             /WEB-INF/applicationContext-filter.xml
             /WEB-INF/applicationContext.xml
             classpath:/bl-enterprise-applicationContext.xml
+            classpath:/bl-enterprise-site-applicationContext.xml
         </param-value>
     </context-param>
 
