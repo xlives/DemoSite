@@ -30,5 +30,7 @@
     <jee:jndi-lookup id="webSecureDS" jndi-name="jdbc/secure"/>
 
     <jee:jndi-lookup id="webStorageDS" jndi-name="jdbc/storage"/>
+
+    <jee:jndi-lookup id="eventDS" jndi-name="jdbc/event"/>
     
 </beans>
