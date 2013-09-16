@@ -18,4 +18,9 @@
         <non-jta-data-source>jdbc/cmsStorage</non-jta-data-source>
         <exclude-unlisted-classes/>
     </persistence-unit>
+
+    <persistence-unit name="blEventPU" transaction-type="RESOURCE_LOCAL">
+        <non-jta-data-source>jdbc/event</non-jta-data-source>
+        <exclude-unlisted-classes/>
+    </persistence-unit>
 </persistence>

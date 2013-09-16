@@ -26,6 +26,7 @@
                 <entry key="jdbc/web" value-ref="webDS"/>
                 <entry key="jdbc/webSecure" value-ref="webSecureDS"/>
                 <entry key="jdbc/cmsStorage" value-ref="webStorageDS"/>
+                <entry key="jdbc/event" value-ref="webEventDS"/>
             </map>
         </property>
     </bean>

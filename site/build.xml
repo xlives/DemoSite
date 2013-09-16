@@ -199,6 +199,7 @@
             <jpaconfiguration persistenceUnit="blPU" dialect="${ant.hibernate.sql.ddl.dialect}" />
             <jpaconfiguration persistenceUnit="blSecurePU" dialect="${ant.hibernate.sql.ddl.dialect}" />
             <jpaconfiguration persistenceUnit="blCMSStorage" dialect="${ant.hibernate.sql.ddl.dialect}" />
+            <jpaconfiguration persistenceUnit="blEventPU" dialect="${ant.hibernate.sql.ddl.dialect}" />
             <!--other required elements-->
             <classpath refid="build.runtime.classpath" />
             <hbm2ddl export="false" update="false" create="true"/>
@@ -295,6 +296,11 @@
                 userName="${ant.blCMSStorage.userName}" 
                 password="${ant.blCMSStorage.password}" 
                 driverClassName="${ant.blCMSStorage.driverClassName}"/>
+            <jpaconfiguration persistenceUnit="blEventPU" dialect="${ant.hibernate.sql.ddl.dialect}"
+                url="${ant.blEventPU.url}"
+                userName="${ant.blEventPU.userName}"
+                password="${ant.blEventPU.password}"
+                driverClassName="${ant.blEventPU.driverClassName}"/>
             <!--other required elements-->
             <classpath refid="build.runtime.classpath" />
             <hbm2ddl export="false" update="true" create="false"/>
