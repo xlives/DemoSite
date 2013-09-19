@@ -9,7 +9,8 @@
     <!-- A dummy mail sender has been set to send emails for testing purposes only
          To view the emails sent use "DevNull SMTP" (download separately) with the following setting:
             Port: 30000 -->
-    <!-- <bean id="blMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <!--
+    <bean id="blMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host"><value>localhost</value></property>
         <property name="port"><value>30000</value></property>
         <property name="protocol"><value>smtp</value></property>
@@ -45,8 +46,8 @@
     <bean id="blMessageCreator" class="org.broadleafcommerce.common.email.service.message.ThymeleafMessageCreator">
         <constructor-arg ref="blEmailTemplateEngine"/>
         <constructor-arg ref="blMailSender"/>
-    </bean> -->
-
+    </bean>
+    -->
     <bean id="blMessageCreator" class="org.broadleafcommerce.common.email.service.message.NullMessageCreator">
         <constructor-arg ref="blMailSender"/>
     </bean>
@@ -70,5 +71,6 @@
     <bean id="blOrderConfirmationEmailInfo" parent="blEmailInfo">
         <property name="subject" value="Your order with The Heat Clinic"/>
         <property name="emailTemplate" value="orderConfirmation-email"/>
-    </bean>             
+    </bean>   
+              
 </beans>

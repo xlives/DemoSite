@@ -282,7 +282,7 @@ header {
 }
 
     #header_content_checkout #checkout_info {
-        width: 450px;
+        width: 500px;
         text-align: right;
         float: right;
         margin-top: 10px;
@@ -1198,7 +1198,7 @@ ul#payment_methods li {
 #paymentOptions dd {
     margin: 5px;
 }
-    
+
 #multiship-products {
     width: 720px;
 }
@@ -2970,16 +2970,19 @@ and (max-width : 480px) {
 .product-option-group.colors li.Silver div   {background-color: #FFFFFF;}
 .product-option-group.colors li.Black div       {background-color: #000000;}
 .product-option-group.colors li.Red div     {background-color: #DC143C;}
+.product-option-group.colors li.Blue div    {background-color:  #0000FF;}
 
     /*color options in Spanish*/
     .product-option-group.colors li.Plateado div   {background-color: #FFFFFF;}
     .product-option-group.colors li.Negro div       {background-color: #000000;}
     .product-option-group.colors li.Rojo div     {background-color: #DC143C;}
+    .product-option-group.colors li.Azul div    {background-color:  #0000FF;}
 
     /*color options in French*/
     .product-option-group.colors li.Argent div   {background-color: #FFFFFF;}
     .product-option-group.colors li.Noir div       {background-color: #000000;}
     .product-option-group.colors li.Rouge div     {background-color: #DC143C;}
+    .product-option-group.colors li.Bleu div    {background-color:  #0000FF;}
 
 /*customer ratings and reviews*/
 #customer-reviews-container {margin: 30px 0 0 20px; width: 400px;}

@@ -199,5 +199,5 @@
         <property name="locations" ref="blCssLocations"/>
         <property name="handlers" ref="blCssHandlers" />
     </bean>
-    
+
 </beans>
