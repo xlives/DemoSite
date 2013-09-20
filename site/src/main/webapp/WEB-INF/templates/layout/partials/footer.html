@@ -58,6 +58,7 @@
                        reviewOperations.js" />
                        
     <div th:if="${#brc.adminMode}" th:remove="tag">
+        <a id="adminDeepLink" th:if="${adminDeepLink}" th:href="@{${adminDeepLink.fullUrl}}" />
         <script th:src="@{/js/sandbox-client.js}"></script>
     </div>
 
