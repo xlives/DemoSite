@@ -14,6 +14,7 @@
     <logger name="org.springframework"> <level value="warn" /> </logger>
     <logger name="org.springframework.web"> <level value="warn" /> </logger>
     <logger name="org.springframework.web.servlet"> <level value="warn" /> </logger>
+    <logger name="org.hibernate.cache.spi.UpdateTimestampsCache"><level value="debug"/></logger>
     
     <root>
         <priority value="warn" />
