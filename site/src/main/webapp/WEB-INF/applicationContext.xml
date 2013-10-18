@@ -95,7 +95,7 @@
     <bean id="blSolrDocInvalidationEventConsumer" 
           depends-on="blDatabaseSystemEventNode"
           class="com.broadleafcommerce.enterprise.workflow.site.service.event.consumer.SolrDocInvalidationEventConsumer" />
-    <!--
+
     <bean id="rebuildIndexJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
         <property name="targetObject" ref="blSearchService" />
         <property name="targetMethod" value="rebuildIndex" />
@@ -111,8 +111,7 @@
                 <ref bean="rebuildIndexTrigger" />
             </list>
         </property>
-    </bean> 
-    -->
+    </bean>
     
     <!--  Broaldeaf Commerce comes with an Image Server that allows you to manipulate images.   For example, the 
           demo includes a high resolution image for each product that is reduced in size for browsing operations -->
