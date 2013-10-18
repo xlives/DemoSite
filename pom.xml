@@ -18,12 +18,12 @@
         <repository>
             <id>public snapshots</id>
             <name>public snapshots</name>
-            <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/snapshots/</url>
+            <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/enterprise-framework-snapshots/</url>
         </repository>
         <repository>
             <id>public releases</id>
             <name>public releases</name>
-            <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/releases/</url>
+            <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/enterprise-framework-releases/</url>
         </repository>
     </repositories>
     <build>
