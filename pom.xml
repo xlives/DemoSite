@@ -16,12 +16,12 @@
     <description>My Company's eCommerce Website</description>
     <repositories>
         <repository>
-            <id>public snapshots</id>
+            <id>enterprise public snapshots</id>
             <name>public snapshots</name>
             <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/enterprise-framework-snapshots/</url>
         </repository>
         <repository>
-            <id>public releases</id>
+            <id>enterprise public releases</id>
             <name>public releases</name>
             <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/enterprise-framework-releases/</url>
         </repository>
