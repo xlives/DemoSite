@@ -27,4 +27,21 @@
         </property>
     </bean>
 
+    <!--For Enterprise sandbox preview, there may be one or more activities that should execute alternate logic when in preview mode,
+    as opposed to production. For example, if you're previewing sandbox changes for a site, you probably don't want to
+    make a real credit card charge during checkout. This would also apply to any fulfillment activity, as you would not
+    want to actually ship product for a preview order. The use of PreviewAwareActivity allows you to accomplish this by
+    specifying two separate activities (a preview version and a production version) for a particular discrete activity
+    operation (e.g. payment, as seen below).-->
+
+    <bean id="demoPaymentActivity" class="org.broadleafcommerce.core.payment.service.workflow.CompositeActivity">
+        <property name="workflow" ref="blAuthorizeAndDebitWorkflow"/>
+    </bean>
+
+    <!--by default, use the same payment activity for preview and prod for the heatclinic demo-->
+    <bean p:order="1000" id="blPaymentActivity" class="com.broadleafcommerce.enterprise.workflow.site.service.workflow.PreviewAwareActivity">
+        <property name="previewActivity" ref="demoPaymentActivity"/>
+        <property name="productionActivity" ref="demoPaymentActivity"/>
+    </bean>
+
 </beans>
