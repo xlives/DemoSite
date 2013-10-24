@@ -49,7 +49,7 @@
     <aop:config>
         <aop:aspect id="previewCheckoutAspect" ref="blPreviewAwareCheckout">
             <aop:pointcut id="previewCheckoutMethod" expression="execution(* org.broadleafcommerce.core.workflow.Processor.doActivities(..)) and bean(blCheckoutWorkflow)"/>
-            <aop:around method="doActivities" pointcut-ref="previewCheckoutMethod"/>
+            <aop:around method="perform" pointcut-ref="previewCheckoutMethod"/>
         </aop:aspect>
     </aop:config>
 
@@ -65,7 +65,7 @@
     <aop:config>
         <aop:aspect id="previewCompleteOrderAspect" ref="blPreviewAwareCompleteOrder">
             <aop:pointcut id="previewCompleteOrderMethod" expression="execution(* org.broadleafcommerce.core.workflow.Activity.execute(..)) and bean(blCompleteOrderActivity)"/>
-            <aop:around method="doActivities" pointcut-ref="previewCompleteOrderMethod"/>
+            <aop:around method="perform" pointcut-ref="previewCompleteOrderMethod"/>
         </aop:aspect>
     </aop:config>
 
