@@ -27,21 +27,46 @@
         </property>
     </bean>
 
+    <!--Only complete the order when in preview mode, and don't execute the rest of the activities in the checkout
+    workflow-->
+
+    <bean id="blPreviewCheckoutWorkflow" class="org.broadleafcommerce.core.workflow.SequenceProcessor">
+        <property name="processContextFactory">
+            <bean class="org.broadleafcommerce.core.checkout.service.workflow.CheckoutProcessContextFactory"/>
+        </property>
+        <property name="activities">
+            <list>
+                <ref bean="blCompleteOrderActivity" />
+            </list>
+        </property>
+        <property name="defaultErrorHandler" ref="blDefaultErrorHandler"/>
+    </bean>
+
+    <bean id="blPreviewAwareCheckout" class="com.broadleafcommerce.enterprise.workflow.site.service.workflow.PreviewAwareAOP">
+        <property name="previewWorkflowOrActivity" ref="blPreviewCheckoutWorkflow"/>
+    </bean>
+
+    <aop:config>
+        <aop:aspect id="previewCheckoutAspect" ref="blPreviewAwareCheckout">
+            <aop:pointcut id="previewCheckoutMethod" expression="execution(* org.broadleafcommerce.core.workflow.Processor.doActivities(..)) and bean(blCheckoutWorkflow)"/>
+            <aop:around method="doActivities" pointcut-ref="previewCheckoutMethod"/>
+        </aop:aspect>
+    </aop:config>
+
     <!--For Enterprise sandbox preview, there may be one or more activities that should execute alternate logic when in preview mode,
-    as opposed to production. For example, if you're previewing sandbox changes for a site, you probably don't want to
-    make a real credit card charge during checkout. This would also apply to any fulfillment activity, as you would not
-    want to actually ship product for a preview order. The use of PreviewAwareActivity allows you to accomplish this by
-    specifying two separate activities (a preview version and a production version) for a particular discrete activity
-    operation (e.g. payment, as seen below).-->
+    as opposed to production.-->
 
-    <bean id="demoPaymentActivity" class="org.broadleafcommerce.core.payment.service.workflow.CompositeActivity">
-        <property name="workflow" ref="blAuthorizeAndDebitWorkflow"/>
+    <bean id="previewCompleteActivity" class="com.broadleafcommerce.enterprise.workflow.site.service.workflow.PreviewCompleteOrderActivity"/>
+
+    <bean id="blPreviewAwareCompleteOrder" class="com.broadleafcommerce.enterprise.workflow.site.service.workflow.PreviewAwareAOP">
+        <property name="previewWorkflowOrActivity" ref="previewCompleteActivity"/>
     </bean>
 
-    <!--by default, use the same payment activity for preview and prod for the heatclinic demo-->
-    <bean p:order="1000" id="blPaymentActivity" class="com.broadleafcommerce.enterprise.workflow.site.service.workflow.PreviewAwareActivity">
-        <property name="previewActivity" ref="demoPaymentActivity"/>
-        <property name="productionActivity" ref="demoPaymentActivity"/>
-    </bean>
+    <aop:config>
+        <aop:aspect id="previewCompleteOrderAspect" ref="blPreviewAwareCompleteOrder">
+            <aop:pointcut id="previewCompleteOrderMethod" expression="execution(* org.broadleafcommerce.core.workflow.Activity.execute(..)) and bean(blCompleteOrderActivity)"/>
+            <aop:around method="doActivities" pointcut-ref="previewCompleteOrderMethod"/>
+        </aop:aspect>
+    </aop:config>
 
 </beans>
