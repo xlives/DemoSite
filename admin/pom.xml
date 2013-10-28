@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.mycompany</groupId>
+        <groupId>com.mycompany-enterprise</groupId>
         <artifactId>ecommerce-website</artifactId>
         <version>1.0</version>
     </parent>
@@ -126,23 +126,23 @@
     <dependencies>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
-            <artifactId>broadleaf-admin-module</artifactId>
+            <artifactId>broadleaf-admin-module-enterprise</artifactId>
         </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
-            <artifactId>broadleaf-contentmanagement-module</artifactId>
+            <artifactId>broadleaf-contentmanagement-module-enterprise</artifactId>
         </dependency>
     
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
-            <artifactId>broadleaf-framework-web</artifactId>
+            <artifactId>broadleaf-framework-web-enterprise</artifactId>
         </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
-            <artifactId>broadleaf-common</artifactId>
+            <artifactId>broadleaf-common-enterprise</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.mycompany</groupId>
+            <groupId>com.mycompany-enterprise</groupId>
             <artifactId>core</artifactId>
         </dependency>
         <dependency>
