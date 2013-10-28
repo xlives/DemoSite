@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mycompany-enterprise</groupId>
+    <groupId>com.mycompany</groupId>
     <artifactId>ecommerce-website</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
@@ -164,7 +164,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.mycompany-enterprise</groupId>
+                <groupId>com.mycompany</groupId>
                 <artifactId>core</artifactId>
                 <version>1.0</version>
                 <type>jar</type>
@@ -174,70 +174,70 @@
             <!--Broadleaf libraries -->
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-common-enterprise</artifactId>
+                <artifactId>broadleaf-common</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-profile-enterprise</artifactId>
+                <artifactId>broadleaf-profile</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-profile-web-enterprise</artifactId>
+                <artifactId>broadleaf-profile-web</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-framework-enterprise</artifactId>
+                <artifactId>broadleaf-framework</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-framework-web-enterprise</artifactId>
+                <artifactId>broadleaf-framework-web</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-admin-module-enterprise</artifactId>
+                <artifactId>broadleaf-admin-module</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-contentmanagement-module-enterprise</artifactId>
+                <artifactId>broadleaf-contentmanagement-module</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-open-admin-platform-enterprise</artifactId>
+                <artifactId>broadleaf-open-admin-platform</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-workflow-enterprise</artifactId>
+                <artifactId>broadleaf-workflow</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>integration-enterprise</artifactId>
+                <artifactId>integration</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <classifier>tests</classifier>
