@@ -276,6 +276,10 @@ header {
     top: 0;
 }
 
+.sandbox-preview #header_content_fixed {
+	top: 50px;
+}
+
 #header_content_checkout {
     width: 980px;
     margin: 0 auto;

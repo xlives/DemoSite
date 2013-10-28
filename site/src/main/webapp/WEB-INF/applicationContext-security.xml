@@ -48,6 +48,9 @@
         
         <!-- Static assets should be allowed to be served under any channel -->
         <sec:intercept-url pattern="/**/${asset.server.url.prefix.internal}/**" requires-channel="any"/>
+
+        <!-- Sandbox Ribbon should be allowed to be served under any channel -->
+        <sec:intercept-url pattern="/sandbox/view-selector" requires-channel="any"/>
         
         <!-- All URLs not explicitly specified as https will be served under http -->
         <sec:intercept-url pattern="/" requires-channel="http"/>
