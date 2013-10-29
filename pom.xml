@@ -17,13 +17,23 @@
     <repositories>
         <repository>
             <id>enterprise snapshots</id>
-            <name>public snapshots</name>
+            <name>enterprise snapshots</name>
             <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/enterprise-framework-snapshots/</url>
         </repository>
         <repository>
             <id>enterprise releases</id>
-            <name>public releases</name>
+            <name>enterprise releases</name>
             <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/enterprise-framework-releases/</url>
+        </repository>
+        <repository>
+            <id>common enterprise snapshots</id>
+            <name>common enterprise snapshots</name>
+            <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/common-enterprise-snapshots/</url>
+        </repository>
+        <repository>
+            <id>common enterprise releases</id>
+            <name>common enterprise releases</name>
+            <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/common-enterprise-releases/</url>
         </repository>
     </repositories>
     <build>
