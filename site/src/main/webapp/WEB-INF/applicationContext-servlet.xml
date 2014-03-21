@@ -25,7 +25,11 @@
 
     <!-- Turn on AOP annotations (required by Broadleaf) -->
     <aop:config/>
-    
+
+    <bean class="com.broadleafcommerce.advancedcms.web.StructuredContentHandlerMapping">
+        <property name="order" value="1" />
+    </bean>
+
     <!--  Checks for a URL match to a product's SEO URL.   -->
     <bean class="org.broadleafcommerce.core.web.catalog.ProductHandlerMapping">
       <property name="order" value="2"/>
