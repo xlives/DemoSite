@@ -95,6 +95,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
+                classpath:/bl-advanced-cms-applicationContext-servlet.xml
                 classpath:/applicationContext-servlet-cms-contentClient.xml
                 /WEB-INF/applicationContext-servlet.xml
             </param-value>
