@@ -122,9 +122,9 @@ public class CatalogEndpoint extends
     public CategoryWrapper findCategoryById(HttpServletRequest request,
             @PathVariable("id") Long id,
             @RequestParam(value = "productLimit", defaultValue = "20") int productLimit,
-            @RequestParam(value = "productOffset", defaultValue = "0") int productOffset,
+            @RequestParam(value = "productOffset", defaultValue = "1") int productOffset,
             @RequestParam(value = "subcategoryLimit", defaultValue = "20") int subcategoryLimit,
-            @RequestParam(value = "subcategoryOffset", defaultValue = "0") int subcategoryOffset) {
+            @RequestParam(value = "subcategoryOffset", defaultValue = "1") int subcategoryOffset) {
         return super.findCategoryById(request, id, productLimit, productOffset,
                 subcategoryLimit, subcategoryOffset);
     }
@@ -134,9 +134,9 @@ public class CatalogEndpoint extends
     public CategoryWrapper findCategoryByIdOrName(HttpServletRequest request,
             @RequestParam("searchParameter") String searchParameter,
             @RequestParam(value = "productLimit", defaultValue = "20") int productLimit,
-            @RequestParam(value = "productOffset", defaultValue = "0") int productOffset,
+            @RequestParam(value = "productOffset", defaultValue = "1") int productOffset,
             @RequestParam(value = "subcategoryLimit", defaultValue = "20") int subcategoryLimit,
-            @RequestParam(value = "subcategoryOffset", defaultValue = "0") int subcategoryOffset) {
+            @RequestParam(value = "subcategoryOffset", defaultValue = "1") int subcategoryOffset) {
         return super.findCategoryByIdOrName(request, searchParameter,
                 productLimit, productOffset, subcategoryLimit, subcategoryOffset);
     }
