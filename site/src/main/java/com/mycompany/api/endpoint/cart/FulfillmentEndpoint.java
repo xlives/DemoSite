@@ -41,8 +41,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping(value = "/cart/fulfillment/",
-    produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
-    consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
 public class FulfillmentEndpoint extends org.broadleafcommerce.core.web.api.endpoint.order.FulfillmentEndpoint {
 
     @Override
@@ -59,7 +58,8 @@ public class FulfillmentEndpoint extends org.broadleafcommerce.core.web.api.endp
     }
 
     @Override
-    @RequestMapping(value = "group", method = RequestMethod.POST)
+    @RequestMapping(value = "group", method = RequestMethod.POST,
+            consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public FulfillmentGroupWrapper addFulfillmentGroupToOrder(HttpServletRequest request,
             FulfillmentGroupWrapper wrapper,
             @RequestParam(value = "priceOrder", defaultValue = "true") boolean priceOrder) {
@@ -67,7 +67,8 @@ public class FulfillmentEndpoint extends org.broadleafcommerce.core.web.api.endp
     }
 
     @Override
-    @RequestMapping(value = "group/{fulfillmentGroupId}", method = RequestMethod.PUT)
+    @RequestMapping(value = "group/{fulfillmentGroupId}", method = RequestMethod.PUT,
+            consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public FulfillmentGroupWrapper addItemToFulfillmentGroup(HttpServletRequest request,
             @PathVariable("fulfillmentGroupId") Long fulfillmentGroupId,
             FulfillmentGroupItemWrapper wrapper,
